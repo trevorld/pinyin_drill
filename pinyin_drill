@@ -173,7 +173,7 @@ play_media <- function(media_file) {
     ans <- "r"
     cat("\nPress <ENTER> to reveal the answer, r<ENTER> to replay, or q<ENTER> to quit\n")
     while(ans == "r") {
-        system(paste("cvlc --no-video --ignore-config --quiet --play-and-exit", media_file, "2> /dev/null"))
+        system(paste("cvlc --no-video --ignore-config --quiet --play-and-exit", shQuote(media_file), "2> /dev/null"))
         ans <- get_input()
     }
 }
@@ -273,7 +273,7 @@ get_ipa <- function(pinyin) {
 
 get_files <- function(audio_dir) {
     # list.files(audio_dir) # Weird error "'translateCharUTF8' must be called on a CHARSXP"
-    system(paste("find", audio_dir, "-type f"), intern=TRUE)
+    system(paste("find", shQuote(audio_dir), "-type f"), intern=TRUE)
 }
 
 get_audio_info <- function(audio_dir) {
