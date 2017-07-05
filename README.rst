@@ -135,10 +135,10 @@ Audio sources
 
 This program will use any sound files (or perhaps symbolic links to sound files located elsewhere such as an Anki media folder) located in directory passed in by the ``-a, --audio`` flag (default ``audio``) named in the format ``optional_folder/pin1yin1_extra_info.mp3``.  Where ``optional_folder`` and ``_extra_info`` is ignored by the program but allows you distinguish multiple sound files for each pinyin.  Besides ``.mp3`` the file ending can be any format recognized by the VLC media player (such as ``.ogg``, ``.flac``, or ``.wav``).  Standard pinyin should be modified in these filenames in the following ways:
 
-   #) Instead of diacritics please use numbers at the end of each syllable to denote the tone including using a 5 at the end to mark the neutral tone e.g. shen2me5de5 and not shen2mede.
-   #) For erhua syllables put the erhua 'r' before the tone number e.g. zher4 not zhe4r5. 
-   #) If you want the program to recognize tone sandhi then apply any relevant tone sandhi e.g. ni2hao3 and not ni3hao3.
-   #) Replace any pinyin ü with a v and any pinyin ê with an eh (the latter is rather rare pinyin used only with interjections like some readings of 欸).
+#) Instead of diacritics please use numbers at the end of each syllable to denote the tone including using a 5 at the end to mark the neutral tone e.g. shen2me5de5 and not shen2mede.
+#) For erhua syllables put the erhua 'r' before the tone number e.g. zher4 not zhe4r5. 
+#) If you want the program to recognize tone sandhi then apply any relevant tone sandhi e.g. ni2hao3 and not ni3hao3.
+#) Replace any pinyin ü with a v and any pinyin ê with an eh (the latter is rather rare pinyin used only with interjections like some readings of 欸).
 
 Pre-assembled Creative Commons Mandarin Audio Pack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
