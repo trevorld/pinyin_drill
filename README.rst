@@ -6,7 +6,7 @@ This is a command line program to drill production and recognition of pinyin.  T
 Installation
 ------------
 
-The program is dependent on the command-line version of the VLC media player (namely ``cvlc``), ``cjknife`` command-line interface to cjklib, and the R programming language as well as the R add-on packages ``optparse``, ``dplyr``, ``scales``, and ``stringr``.  Below are the commands to install these on Debian/Ubuntu Linux (and probably also on Bash on Ubuntu on Windows).  For other \*nix environments (like OSX or Cygwin on Windows) replace ``apt-get install`` with your preferred package manager.::
+The ``pinyin_drill`` program is dependent on the command-line version of the VLC media player (namely ``cvlc``), ``cjknife`` command-line interface to cjklib, and the R programming language as well as the R add-on packages ``optparse``, ``dplyr``, ``scales``, and ``stringr``.  Below are the commands to install these on Debian/Ubuntu Linux (and probably also on Bash on Ubuntu on Windows).  For other \*nix environments (like OSX or Cygwin on Windows) replace ``apt-get install`` with your preferred package manager.::
 
     bash$ sudo apt-get install vlc r-base pip 
     bash$ sudo -H pip install cjklib
@@ -143,9 +143,9 @@ This program will use any sound files (or perhaps symbolic links to sound files 
 Pre-assembled Creative Commons Mandarin Audio Pack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-I've assembled a "Collective Work" of Creative Commons licensed Mandarin audio available as of 2017-07-03 from https://u14129277.dl.dropboxusercontent.com/u/14129277/cc_mandarin_audio_pack.zip .  It contains Mandarin audio from chinese-lessons.com, forvo.com, sinosplice.com, and shtooka.net.  See its ``README.rst`` for more info.
+I've assembled a "Collective Work" of Creative Commons licensed Mandarin audio available as of 2017-07-03 from https://u14129277.dl.dropboxusercontent.com/u/14129277/cc_mandarin_audio_pack.zip .  It contains Mandarin audio from chinese-lessons.com, forvo.com, sinosplice.com, and shtooka.net.  See its `README.rst <https://github.com/trevorld/mandarin_audio_utilities/blob/master/cc_README.rst>`_ for more info.
 
-I've also assembled a "Collective Work" (which is a subset of the above "Collective Work") of just the "Free Cultural Works" Creative Commons licensed Mandarin audio (i.e. among other things allows commercial use) available as of 2017-07-04 from https://u14129277.dl.dropboxusercontent.com/u/14129277/fc_mandarin_audio_pack.zip .  It contains Mandarin audio from shtooka.net.  See its ``README.rst`` for more info.
+I've also assembled a "Collective Work" (which is a subset of the above "Collective Work") of just the "Free Cultural Works" Creative Commons licensed Mandarin audio (i.e. among other things allows commercial use) available as of 2017-07-04 from https://u14129277.dl.dropboxusercontent.com/u/14129277/fc_mandarin_audio_pack.zip .  It contains Mandarin audio from shtooka.net.  See its `README.rst <https://github.com/trevorld/mandarin_audio_utilities/blob/master/fc_README.rst>`_ for more info.
 
 Creative Commons Audio
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -153,9 +153,9 @@ Creative Commons Audio
 Some sources of Creative Commons licensed Mandarin audio files:
 
 #) chinese-lessons.com "Mandarin voice soundset".  CC BY-NC-ND 3.0.  http://www.chinese-lessons.com/download.htm
-#) Shtooka "Base Audio Libre De Mots Chinois (Congcong)".  CC-BY 3.0.  http://download.shtooka.net/cmn-balm-congcong_flac.tar
-#) Shtooka "Base Audio Libre De Mots Chinois (Wei Gao and Vion Nicolas)".  CC-BY 2.0.  http://download.shtooka.net/cmn-balm-hsk1_flac.tar
-#) Shtooka "Collection Audio Libre De Mots Chinois (Yue Tan)".  CC-BY 3.0.  http://download.shtooka.net/cmn-caen-tan_flac.tar
+#) Shtooka "Base Audio Libre De Mots Chinois (Congcong)".  CC-BY 3.0 US.  http://download.shtooka.net/cmn-balm-congcong_flac.tar
+#) Shtooka "Base Audio Libre De Mots Chinois (Wei Gao and Vion Nicolas)".  CC-BY 2.0 FR.  http://download.shtooka.net/cmn-balm-hsk1_flac.tar
+#) Shtooka "Collection Audio Libre De Mots Chinois (Yue Tan)".  CC-BY-SA 3.0 US.  http://download.shtooka.net/cmn-caen-tan_flac.tar
 #) Sinosplice (John Pasden) "Tone Pair drills".  CC BY-NC-SA 2.5.  http://www.sinosplice.com/learn-chinese/tone-pair-drills
 #) Forvo.  CC BY-NC-SA 3.0.  https://forvo.com/
 
