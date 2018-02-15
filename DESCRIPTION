@@ -1,0 +1,16 @@
+Package: PinyinDrillR
+Type: Package
+Title: Pinyin Drill
+Version: 1.0.0
+Author: Trevor L Davis
+Maintainer: Trevor L Davis <trevor.l.davis@gmail.com>
+URL: https://github.com/trevorld/pinyin_drill
+BugReports: https://github.com/trevorld/pinyin_drill/issues
+Description: Package containing a pinyin drilling executable Rscript in the package exec directory.
+  Also contains Pinyin to IPA and Zhuyin functions.
+Depends: dplyr, stringr, optparse, scales
+SystemDepends: cjklib i.e. ``sudo -H pip install cjklib``
+License: GPL (>=2)
+Roxygen: list(markdown = TRUE)
+LazyData: TRUE
+RoxygenNote: 6.0.1

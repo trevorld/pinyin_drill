@@ -1,29 +1,23 @@
 Overview
 --------
 
-This is a command line program to drill production and recognition of pinyin.  The program is tested to run in a Bash shell (in a Unicode locale) which should be available on most modern operating systems (i.e. "Bash on Ubuntu on Windows").  It probably runs fine in other \*Nix shells but should not be expected to run in the Windows Command Prompt.
+This is an R package and command line program to drill production and recognition of pinyin.  The program is tested to run in a Bash shell (in a Unicode locale) which should be available on most modern operating systems (i.e. "Bash on Ubuntu on Windows").  It probably runs fine in other \*Nix shells but should not be expected to run in the Windows Command Prompt.
 
 Installation
 ------------
 
-The ``pinyin_drill`` program is dependent on the command-line version of the VLC media player (namely ``cvlc``), ``cjknife`` command-line interface to cjklib, and the R programming language as well as the R add-on packages ``optparse``, ``dplyr``, ``scales``, and ``stringr``.  Below are the commands to install these on Debian/Ubuntu Linux (and probably also on Bash on Ubuntu on Windows).  For other \*nix environments (like OSX or Cygwin on Windows) replace ``apt-get install`` with your preferred package manager.::
+The ``pinyin_drill`` program in the ``exec`` folder is dependent on the command-line version of the VLC media player (namely ``cvlc``), ``cjknife`` command-line interface to cjklib, and the R programming language as well as the R add-on packages ``optparse``, ``dplyr``, ``scales``, and ``stringr``.  Below are the commands to install this package and the other dependencies on Debian/Ubuntu Linux (and probably also on Bash on Ubuntu on Windows).  For other \*nix environments (like OSX or Cygwin on Windows) replace ``apt install`` with your preferred package manager.::
 
-    bash$ sudo apt-get install vlc r-base pip 
+    bash$ sudo apt install vlc r-base pip 
     bash$ sudo -H pip install cjklib
     bash$ sudo R
-    > install.packages(c("optparse", "dplyr", "scales", "stringr")) # manually select mirror
+    > install.packages(c("devtools")) # manually select mirror
+    > devtools::install_github("trevorld/pinyin_drill")
     > quit('no')
 
-This project can then be downloaded from github (easiest via git)::
+The executable Rscript ``exec/pinyin_drill`` can then be copied to a ``bin`` directory on your path if you like (R won't automatically add it on a path for you)::
 
-    bash$ sudo apt-get install git
-    bash$ git clone https::/github.com/trevorld/pinyin_drill
-    bash$ cd pinyin_drill
-
-The executable Rscript ``pinyin_drill`` can copied to a ``bin`` directory on your path if you like::
-
-    bash$ chmod u+x pinyin_drill
-    bash$ cp pinyin_drill ~/bin
+    > file.copy(system.file("exec/pinyin_drill", package="PinyinDrillR"), "~/bin/pinyin_drill")
 
 The program needs audio in a certain format (described below) in a folder specified by the ``-a, --audio_dir`` option (default ``audio``).  Depending on where you like your audio stored you may wish to create a bash (or other shell) alias for ``pinyin_drill``::
 
@@ -130,6 +124,33 @@ Drill pronunciation of all two-syllables words you have::
 
     bash$ pinyin_drill -d --nsyllables=2
 
+一步一个脚印 Top 20 Most Common Pronunciation Errors
+----------------------------------------------------
+
+From http://carlgene.com/blog/2016/01/top-20-most-common-pronunciation-errors-by-chinese-learners/::
+
+    bash$ pinyin_drill --pinyin=ri4,re4 --nsyllables=1
+    bash$ pinyin_drill --pinyin=zang1,zhang1 --nsyllables=1
+    bash$ pinyin_drill --pinyin=che4,ce4 --nsyllables=1
+    bash$ pinyin_drill --pinyin=nu3,nv3 --nsyllables=1
+    bash$ pinyin_drill --pinyin=qi1,chi1 --nsyllables=1
+    bash$ pinyin_drill --pinyin=e4,er4 --nsyllables=1
+    bash$ pinyin_drill --pinyin=tan2,tang2 --nsyllables=1
+    bash$ pinyin_drill --pinyin=jin1,jing1 --nsyllables=1
+    bash$ pinyin_drill --pinyin=mo1,mou1 --nsyllables=1
+    bash$ pinyin_drill --pinyin=luan4,lun4 --nsyllables=1
+    bash$ pinyin_drill --pinyin=quan2,qun2 --nsyllables=1
+    bash$ pinyin_drill --pinyin=ran3,ruan3 --nsyllables=1
+    bash$ pinyin_drill --pinyin=wang1 --nsyllables=1
+    bash$ pinyin_drill --pinyin=wan1 --nsyllables=1
+    bash$ pinyin_drill --pinyin=wen1 --nsyllables=1
+    bash$ pinyin_drill --pinyin=weng1 --nsyllables=1
+    bash$ pinyin_drill --pinyin=wo1 --nsyllables=1
+    bash$ pinyin_drill --pinyin=yan1 --nsyllables=1
+    bash$ pinyin_drill --pinyin=you1 --nsyllables=1
+    bash$ pinyin_drill --pinyin=yong1 --nsyllables=1
+
+
 Audio sources
 -------------
 
@@ -143,9 +164,9 @@ This program will use any sound files (or perhaps symbolic links to sound files 
 Pre-assembled Creative Commons Mandarin Audio Pack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-I've assembled a "Collective Work" of Creative Commons licensed Mandarin audio available as of 2017-07-03 from https://u14129277.dl.dropboxusercontent.com/u/14129277/cc_mandarin_audio_pack.zip .  It contains Mandarin audio from chinese-lessons.com, forvo.com, sinosplice.com, and shtooka.net.  See its `README.rst <https://github.com/trevorld/mandarin_audio_utilities/blob/master/cc_README.rst>`_ for more info.
+I've assembled a "Collective Work" of Creative Commons licensed Mandarin audio available as of 2017-07-03 from https://u14129277.dl.dropboxusercontent.com/u/14129277/cc_mandarin_audio_pack.zip .  It contains Mandarin audio from chinese-lessons.com, forvo.com, sinosplice.com, and shtooka.net.  See its `README <https://github.com/trevorld/mandarin_audio_utilities/blob/master/cc_README.rst>`__ for more info.
 
-I've also assembled a "Collective Work" (which is a subset of the above "Collective Work") of just the "Free Cultural Works" Creative Commons licensed Mandarin audio (i.e. among other things allows commercial use) available as of 2017-07-04 from https://u14129277.dl.dropboxusercontent.com/u/14129277/fc_mandarin_audio_pack.zip .  It contains Mandarin audio from shtooka.net.  See its `README.rst <https://github.com/trevorld/mandarin_audio_utilities/blob/master/fc_README.rst>`_ for more info.
+I've also assembled a "Collective Work" (which is a subset of the above "Collective Work") of just the "Free Cultural Works" Creative Commons licensed Mandarin audio (i.e. among other things allows commercial use) available as of 2017-07-04 from https://u14129277.dl.dropboxusercontent.com/u/14129277/fc_mandarin_audio_pack.zip .  It contains Mandarin audio from shtooka.net.  See its `README <https://github.com/trevorld/mandarin_audio_utilities/blob/master/fc_README.rst>`__ for more info.
 
 Creative Commons Audio
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -164,6 +185,7 @@ Non-Creative Commons Audio
 
 Some sources of proprietary Mandarin audio files:
 
+#) 400 Unique Sounds in Mandarin Chinese by Carl Gene: http://carlgene.com/blog/2016/01/400-unique-sounds-in-mandarin-chinese/
 #) 625 Words Mandarin Word package by Gabriel Wyner:  https://fluent-forever.com/product/most-awesome-word-lists-ever-seen/
 #) Mandarin Pronunciation Trainer package by Gabriel Wyner:  https://fluent-forever.com/product/fluent-forever-pronunciation-trainer/ 
 
@@ -175,4 +197,4 @@ The site https://github.com/trevorld/mandarin_audio_utilities has helper scripts
 License
 -------
 
-``pinyin_drill`` is Copyright 2017 by Trevor L. Davis and is licensed under the GPL version 2 or higher.  
+``pinyin_drill`` is Copyright 2017-2018 by Trevor L. Davis and is licensed under the GPL version 2 or higher.  

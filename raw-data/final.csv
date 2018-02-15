@@ -1,0 +1,82 @@
+final,pinyin,bastardized_pinyin,ipa,bopomofo,bastardized_bopomofo,example,note
+a,a,a,a,ㄚ,ㄚ,哪,
+ai,ai,ai,ai̯,ㄞ,ㄞ,带,"Some say pronounced aɪ."
+air,air,ar,aɚ̯,ㄞㄦ,ㄚㄦ,带儿,
+an,an,an,an,ㄢ,ㄢ,哪,
+anr,anr,ar,aɚ̯,ㄢㄦ,ㄚㄦ,板儿,
+ang,ang,ang,aŋ,ㄤ,ㄤ,趟,"Some say pronounced ɑŋ."
+angr,angr,ãr,ãɚ̯̃,ㄤㄦ,ㄤㄦ,趟儿,"Nasalized."
+ao,ao,ao,au̯,ㄠ,ㄠ,包,"Some say pronounced ɑu̯."
+aor,aor,aor,au̯˞,ㄠㄦ,ㄠㄦ,包儿,
+ar,ar,ar,aɚ̯,ㄚㄦ,ㄚㄦ,哪儿,
+e,e,ë,ɤ,ㄜ,ㄜ,这,"Note -e\'s e is a close-mid back vowel ɤ."
+e'r,er,ër,ɤ˞,ㄜㄦ,ㄜㄦ,这儿,"Denotes when an erhua r is added to an -e final.  Can be confused with 'er and -eir/-enr."
+'er,er,ar,aɚ̯,ㄦ,ㄚㄦ,二,"Denotes standalone 'er syllable.  Most often pronounced [aɚ̯] but sometimes (and historically) pronounced [ɚ̯].  Can be confused with e'r and -eir/-enr."
+ei,ei,ei,ei̯,ㄟ,ㄟ,贝,
+eir,eir,er,ɚ̯,ㄟㄦ,ㆤㄦ,贝儿,"Can be confused with 'er and e'r."
+en,en,en,ən,ㄣ,ㄣ,本,"Note -en\'s e is a central vowel ə."
+enr,enr,er,ɚ̯,ㄣㄦ,ㆤㄦ,本儿,"Can be confused with 'er and e'r."
+eng,eng,eng,əŋ,ㄥ,ㄥ,能,"Note -eng\'s e is a central vowel ə."
+engr,engr,ẽr,ɚ̃,ㄥㄦ,ㄥㄦ,崩儿,"Nasalized."
+eh,ê,ê,ɛ,ㄝ,ㄝ,欸,"Written in pinyin as ê.  Characters like this also written ai or ei.  Used only as an interjection."
+i,i,i,i,ㄧ,ㄧ,一,"Denotes -i not following c,s,z,ch,sh,zh, or r initials.  With no initial written yi."
+ir,ir,ir,jɚ,ㄧㄦ,ㄧㄦ,鼻儿,"Denotes -ir not following c,s,z,ch,sh,zh, or r initials."
+r,i,ï, ͡ɨ,"",ㆨ,吃,"Denotes -i following ch,sh,zh, or r initial.  Other phonetic symbols used are ʅ, ʐ̩́, ɻ̩, and ɨ.  Bopomofo ㄭ usually omitted."
+rr,ir,ïr, ͡ɨɚ,ㄦ,ㆨㄦ,事儿,"Denotes -ir following ch,sh,zh, or r initials."
+z,i,ï, ͡ɯ,"",ㄭ,子,"Denotes -i following c,s, or z initial.  Other phonetic symbols used are ɿ, ź̩, ɹ̩, and, ɨ.  Bopomofo ㄭ usually omitted."
+zr,ir,ïr, ͡ɯɚ,ㄦ,ㄭㄦ,字儿,"Denotes -ir following c,s, or z initials."
+ia,ia,ia,ia,ㄧㄚ,ㄧㄚ,家,"With no initial written ya."
+iar,iar,iar,iaɚ̯,ㄧㄚㄦ,ㄧㄚㄦ,下儿,"Some say the -iar and -ianr finals are the same."
+ian,ian,iän,iɛn,ㄧㄢ,ㄧㄝㄋ,严,"With no initial written yan.  Some say pronounced jæn."
+ianr,ianr,iär,iɐɚ̯,ㄧㄢㄦ,ㄧㄝㄦ,点儿,"Some say the -iar and -ianr finals are the same.  Can be confused with -iar."
+iang,iang,iang,iaŋ,ㄧㄤ,ㄧㄤ,阳,"With no initial written yang.  Some say pronounced jɑŋ."
+iangr,iangr,iãr,iãɚ̯̃,ㄧㄤㄦ,ㄧㄤㄦ,样儿,"Nasalized."
+iao,iao,iao,iau̯,ㄧㄠ,ㄧㄠ,表,"With no initial written yao.  Some say pronounced jɑo."
+iaor,iaor,iaor,iau̯˞,ㄧㄠㄦ,ㄧㄠㄦ,漂儿,
+ie,ie,ie,ie,ㄧㄝ,ㄧㆤ,也,"With no initial written ye."
+ier,ier,ir,jɚ,ㄧㄝㄦ,ㄧㄦ,鞋儿,"Can be confused with ir."
+in,in,in,in,ㄧㄣ,ㄧㄋ,品,
+inr,inr,ir,jɚ,ㄧㄣㄦ,ㄧㄦ,劲儿,"Can be confused with ir."
+ing,ing,ing,iŋ,ㄧㄥ,ㄧㄫ,平,"With no initial written ying.  Some say ying is pronounced jəŋ."
+ingr,ingr,ĩr,jɚ̃,ㄧㄥㄦ,ㄧㄥㄦ,瓶儿,"Nasalized."
+io,io,io,iɔ,ㄧㄛ,ㄧㆦ,哟,"Used only in interjections.  Written as yo.  Some sources say pronounced jo."
+iong,iong,iong,iʊŋ,ㄩㄥ,ㄧㆲ,熊,"With no initial written yong."
+iongr,iongr,iõr,iʊ̃˞,ㄩㄥㄦ,ㄧㆲㄦ,熊儿,
+iu,iu,io̷u,iou̯,ㄧㄡ,ㄧㄡ,牛,"Pronounced -iou.  With no initial written you."
+iur,iur,io̷ur,iou̯˞,ㄧㄡㄦ,ㄧㄡㄦ,牛儿,
+m,m,m,m̩,ㄇ,ㆬ,呣,"Characters written like this also written mou, mu, or wu.  Consonant syllable used only as an interjection."
+n,n,n,n̩,ㄋ,ㄋ,嗯,"Characters written like this also written en or ng. Consonant syllable used only as an interjection.  Extendend Bopomofo has [n̩] but not in Unicode."
+ng,ng,ng,ŋ̍,ㄫ,ㆭ,嗯,"Characters written like this also written n or en. Consonant syllable used only as an interjection."
+o,o,o,ɔ,ㄛ,ㆦ,哦,"Denotes -o only used as an interjection o and in the participle 咯 (lo).  Some sources say pronounced o."
+(u)o,o,u̷o,wo,ㄛ,ㄨㄛ,多,"Denotes -o following b, p, m, and f.  Usually sounds like and often classified as an -uo final."
+ong,ong,ong,ʊŋ,ㄨㄥ,ㆲ,用,"Same Bopomofo as -ueng."
+ongr,ongr,õr,ʊ̃˞,ㄨㄥㄦ,ㆲㄦ,同儿,"Nasalized."
+or,or,u̷or,wo˞,ㄛㄦ,ㄨㄛㄦ,末儿,"Some classify this as an -uor final."
+ou,ou,ou,ou̯,ㄡ,ㄡ,都,
+our,our,our,ou̯˞,ㄡㄦ,ㄡㄦ,头儿,
+u,u,u,u,ㄨ,ㄨ,语,"With no initial written wu."
+ur,ur,ur,u˞,ㄨㄦ,ㄨㄦ,谱儿,
+ua,ua,ua,wa,ㄨㄚ,ㄨㄚ,娃,"With no initial written wa."
+uai,uai,uai,wai̯,ㄨㄞ,ㄨㄞ,外,"With no initial written wai. Some say pronounced waɪ."
+uair,uair,uar,waɚ̯,ㄨㄞㄦ,ㄨㄚㄦ,,
+uan,uan,uan,wan,ㄨㄢ,ㄨㄢ,断,"With no initial written wan."
+uanr,uanr,uar,waɚ̯,ㄨㄢㄦ,ㄨㄚㄦ,馆儿,
+uang,uang,uang,waŋ,ㄨㄤ,ㄨㄤ,王,"With no initial written wang.  Some say pronounced wɑŋ."
+uangr,uangr,uǎr,wãɚ̯̃,ㄨㄤㄦ,ㄨㄤㄦ,窗儿,"Nasalized."
+uar,uar,uar,waɚ̯,ㄨㄚㄦ,ㄨㄚㄦ,瓜儿,
+ueng,ueng,ueng,wəŋ,ㄨㄥ,ㄨㄥ,翁,"Only exists in Mandarin with no initial written weng.  Same Bopomofo as -ong."
+uengr,uengr,uẽr,wɚ̃,ㄨㄥㄦ,ㄨㄥㄦ,瓮儿,"Nasalized."
+ui,ui,ue̷i,wei̯,ㄨㄟ,ㄨㄟ,对,"Pronounced -uei.  With no initial written written wei."
+uir,uir,ue̷r,wɚ,ㄨㄟㄦ,ㄨㄦ,会儿,
+un,un,ue̷n,wən,ㄨㄣ,ㄨㄣ,盾,"Pronounced -uen.  With no initial written written wen."
+unr,unr,ue̷r,wɚ,ㄨㄣㄦ,ㄨㄦ,棍儿,
+uo,uo,uo,wo,ㄨㄛ,ㄨㄛ,多,"With no initial written wo."
+uor,uor,uor,wo˞,ㄨㄛㄦ,ㄨㄛㄦ,锅儿,
+v,ü,ü,y,ㄩ,ㄩ,需,"Written -ü or if after j,q, or x as -u.  With no initial written yu."
+vr,ür,ür,yɚ,ㄩㄦ,ㄩㄦ,驴儿,
+van,üan,üän,yɛn,ㄩㄢ,ㄩㄝㄋ,元,"Written -üan or if after j,q, or x as -uan.  With no initial written yuan.  Some say pronounced ɥæn."
+vanr,üanr,üär,yɐɚ̯,ㄩㄢㄦ,ㄩㄝㄦ,院儿,"Written -üanr or if after j,q, or x as -uanr."
+ve,üe,üe,ye,ㄩㄝ,ㄩㆤ,月,"Written -üe or if after j,q, or x as -ue.  With no initial written yue."
+ver,üer,ür,yɚ,ㄩㄝㄦ,ㄩㄦ,角儿,"Written -üer or if after j,q, or x as -uer."
+vn,ün,ün,yn,ㄩㄣ,ㄩㄋ,群,"Written -ün or if after j,q, or x as -un.  With no initial written yun."
+vnr,ünr,ür,yɚ,ㄩㄣㄦ,ㄩㄦ,群儿,

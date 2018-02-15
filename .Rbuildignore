@@ -1,0 +1,11 @@
+CONTRIBUTING
+README.rst
+audio
+src
+doc
+raw-data
+data/erhua.rst
+^\.travis\.yml$
+^.*\.Rproj$
+^\.Rproj\.user$
+o09_interjections.pdf

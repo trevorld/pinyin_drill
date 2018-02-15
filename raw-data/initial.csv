@@ -1,0 +1,23 @@
+initial,pinyin,ipa,bopomofo,example,note
+',,,,"也","\'no initial\' initial"
+b,b,p,ㄅ,"百","unaspirated p"
+p,p,pʰ,ㄆ,"平","strongly aspirated p"
+m,m,m,ㄇ,"门",
+f,f,f,ㄈ,"方",
+d,d,t,ㄉ,"多","unaspirated t"
+t,t,tʰ,ㄊ,"台","strongly aspirated t"
+n,n,n,ㄋ,"那",
+l,l,l,ㄌ,"里",
+g,g,k,ㄍ,"高","unaspirated k"
+k,k,kʰ,ㄎ,"口","strongly aspirated k"
+h,h,x,ㄏ,"红","roughly like the Scots ch"
+j,j,t͡ɕ,ㄐ,"军",
+q,q,t͡ɕʰ,ㄑ,"群",
+x,x,ɕ,ㄒ,"心",
+zh,zh,ʈ͡ʂ,ㄓ,"只",
+ch,ch,ʈ͡ʂʰ,ㄔ,"吃",
+sh,sh,ʂ,ㄕ,"是",
+r,r,ɻ,ㄖ,"人","also pronounced [ʐ]"
+z,z,ts,ㄗ,"子","unaspirated c"
+c,c,tsʰ,ㄘ,"才",
+s,s,s,ㄙ,"三",

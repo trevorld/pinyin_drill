@@ -1,0 +1,144 @@
+#!/usr/bin/env Rscript
+#
+# Copyright (c) 2017 Trevor L. Davis <trevor.l.davis@gmail.com>  
+#  
+# This file is free software: you may copy, redistribute and/or modify it  
+# under the terms of the GNU General Public License as published by the  
+# Free Software Foundation, either version 2 of the License, or (at your  
+# option) any later version.  
+# 
+# This file is distributed in the hope that it will be useful, but  
+# WITHOUT ANY WARRANTY; without even the implied warranty of  
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU  
+# General Public License for more details.  
+# 
+# You should have received a copy of the GNU General Public License  
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.  
+#  
+suppressPackageStartupMessages(library("PinyinDrillR"))
+
+main <- function() {
+    
+    parser <- OptionParser(description = "A command line program to drill production and recognition of pinyin.  The program will continually question you until you quit.  Quit with a q<ENTER>.")
+    parser <- add_option(parser, c("-i", "--initial"), default='*', 
+                         help = "Possible initials of at least one syllable (separate with ',').  Use \"'\" for no-initial and '*' for all [default '%default'].  Run ``pinyin_drill`` with ``--list_initials`` option for list of all recognized initials.  Currently only checks the first four syllables.")
+    parser <- add_option(parser, c("-f", "--final"), default='*', 
+                         help = "Possible finals of at least one syllable (separate with ','). ü is denoted by a v; the three different i finals are denoted i, r, and z respectively; the 'er syllable is usually denoted ar, and '*' means all [default '%default']. Run ``pinyin_drill`` with ``--list_finals`` option for list of all recognized finals including erhua finals and interjection syllables.  Currently only checks the first four syllables.")
+    parser <- add_option(parser, c("-t", "--tone"), default='*', 
+                         help = "Possible tones of at least one syllable (separate with ','), represent neutral tone with a 5, '*' means all [default '%default'].  Currently only checks the first four syllables.")
+    parser <- add_option(parser, c("-p", "--pinyin"), default="*",
+                        help = "Possible pinyin of at least one syllable (separate with ',' with tone number optional at the end).  Represent ü with a v and the rare ê with an eh. '*' means any [default '%default'].")
+    parser <- add_option(parser, c("--initial1"), default='*', 
+                         help = "Possible initials of first syllable [default '%default'].")
+    parser <- add_option(parser, c("--final1"), default='*', 
+                         help = "Possible finals of first syllable [default '%default']")
+    parser <- add_option(parser, c("--tone1"), default='*', 
+                         help = "Possible tones of first syllable [default '%default']")
+    parser <- add_option(parser, c("--pinyin1"), default='*', 
+                         help = "Possible pinyin of first syllable [default '%default']")
+    parser <- add_option(parser, c("--initial2"), default='*', 
+                         help = "Possible initials of second syllable [default '%default']")
+    parser <- add_option(parser, c("--final2"), default='*', 
+                         help = "Possible finals of second syllable [default '%default']")
+    parser <- add_option(parser, c("--tone2"), default='*', 
+                         help = "Possible tones of second syllable [default '%default']")
+    parser <- add_option(parser, c("--pinyin2"), default='*', 
+                         help = "Possible pinyin of second syllable [default '%default']")
+    parser <- add_option(parser, c("--initial3"), default='*', 
+                         help = "Possible initials of third syllable [default '%default']")
+    parser <- add_option(parser, c("--final3"), default='*', 
+                         help = "Possible finals of third syllable [default '%default']")
+    parser <- add_option(parser, c("--tone3"), default='*', 
+                         help = "Possible tones of third syllable [default '%default']")
+    parser <- add_option(parser, c("--pinyin3"), default='*', 
+                         help = "Possible pinyin of third syllable [default '%default']")
+    parser <- add_option(parser, c("--initial4"), default='*', 
+                         help = "Possible initials of fourth syllable [default '%default']")
+    parser <- add_option(parser, c("--final4"), default='*', 
+                         help = "Possible finals of fourth syllable [default '%default']")
+    parser <- add_option(parser, c("--tone4"), default='*', 
+                         help = "Possible tones of fourth syllable [default '%default']")
+    parser <- add_option(parser, c("--pinyin4"), default='*', 
+                         help = "Possible pinyin of fourth syllable [default '%default']")
+    parser <- add_option(parser, c("-n", "--nsyllables"), default='*', 
+                         help = "Number of syllables audio should have (separate with ','), '*' means any [default '%default']")
+    parser <- add_option(parser, c("-d", "--display_pinyin_first"), default=FALSE, 
+                         action="store_true", help = "Display pinyin before playing media [default %default]")
+    parser <- add_option(parser, c("-a", "--audio_dir"), default = "audio",
+                         help = "Audio directory [default %default]")
+    parser <- add_option(parser, c("--filter"), default = "*",
+                         help = "Additional regular expression to filter the files/subdirectories on [default %default]")
+    parser <- add_option(parser, c("-l", "--list_audio"), default = FALSE, action="store_true",
+                         help = "Just print audio files that match filters and quit")
+    parser <- add_option(parser, c("--list_finals"), default = FALSE, action="store_true",
+                         help = "Just print the finals recognized by program and quit")
+    parser <- add_option(parser, c("--list_initials"), default = FALSE, action="store_true",
+                         help = "Just print the initials recognized by program and quit")
+
+    if (interactive()) {
+        args <- c()
+        opts <- parse_args(parser, args)
+    } else {
+        opts <- parse_args(parser)
+    }
+
+    audio_info <- get_filtered_audio_info(opts)
+
+    if (nrow(audio_info) == 0) {
+        no_audio(opts$audio_dir)
+    }
+    if (opts$list_audio) {
+        cat(audio_info$audio, sep="\n")
+        quit('no')
+    }       
+    if (opts$list_finals) {
+        print_table(mandarin_finals %>% select(final, pinyin, ipa, example, note))
+        quit('no')
+    }       
+    if (opts$list_initials) {
+        print_table(mandarin_initials %>% select(initial, pinyin, ipa, example, note))
+        quit('no')
+    }       
+
+    correct <- vector("numeric")
+    system("clear")
+    while(TRUE) {
+
+        ii <- sample.int(nrow(audio_info), 1)
+        media_file <- audio_info[ii, "audio"]
+        ascii_pinyin <- audio_info[ii, "pinyin"]
+        deconstruction <- audio_info[ii, "deconstruction"]
+        pinyin <- clean_pinyin(ascii_pinyin)
+        # ipa <- audio_info[ii, "ipa"]
+        ipa <- get_ipa(ascii_pinyin)
+
+        if (opts$display_pinyin_first) {
+            cat("\nPinyin: ", ascii_pinyin, '/', pinyin)
+            cat("\nPress <ENTER> when ready to play media (or q<ENTER> to quit)\n")
+            get_input()
+            play_media(media_file)
+        } else {
+            play_media(media_file)
+            cat("\nPinyin: ", ascii_pinyin, '/', pinyin)
+        }
+        cat("\nIPA: ", ipa)
+        cat("\nInitial-Final Deconstruction: ", deconstruction)
+        cat("\nMedia file: ", media_file)
+        cat("\n\nDid you get it right (y/n/q)?\n")
+        ans <- get_input()
+        if (ans == "y")
+            correct <- append(correct, 1)
+        else
+            correct <- append(correct, 0)
+        percent_today <- scales::percent(mean(correct))
+        percent_last_ten <- scales::percent(mean(tail(correct, 10)))
+
+        system("clear")
+        cat(percent_today, "correct this session, ", percent_last_ten, "correct last ten", "\n")
+    }
+
+}
+
+
+
+main()
