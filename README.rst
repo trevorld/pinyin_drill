@@ -25,12 +25,12 @@ The program needs audio in a certain format (described below) in a folder specif
 
 For personal and non-commercial you may use the following commands download an assembled "Collective Work" of Creative Commons licensed Mandarin audio already in the desired format::
 
-    bash$ wget https://u14129277.dl.dropboxusercontent.com/u/14129277/cc_mandarin_audio_pack.zip 
+    bash$ wget https://www.dropbox.com/s/0f01hiopxs6gixz/cc_mandarin_audio_pack.zip?dl=0 
     bash$ unzip cc_mandarin_audio_pack.zip
 
 As an alternative you may use the following commands to download a smaller "Collective Work" comprised of just the "Free Cultural Works" contained in the previous audio pack that allow commercial use::
 
-    bash$ wget https://u14129277.dl.dropboxusercontent.com/u/14129277/fc_mandarin_audio_pack.zip 
+    bash$ wget https://www.dropbox.com/s/bh3ctzsgwbagbw0/fc_mandarin_audio_pack.zip?dl=0
     bash$ unzip fc_mandarin_audio_pack.zip
 
 Usage
