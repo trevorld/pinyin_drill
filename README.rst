@@ -17,6 +17,7 @@ The ``pinyin_drill`` program in the ``exec`` folder is dependent on the command-
 
 The executable Rscript ``exec/pinyin_drill`` can then be copied to a ``bin`` directory on your path if you like (R won't automatically add it on a path for you)::
 
+    bash$ R
     > file.copy(system.file("exec/pinyin_drill", package="PinyinDrillR"), "~/bin/pinyin_drill")
 
 The program needs audio in a certain format (described below) in a folder specified by the ``-a, --audio_dir`` option (default ``audio``).  Depending on where you like your audio stored you may wish to create a bash (or other shell) alias for ``pinyin_drill``::
