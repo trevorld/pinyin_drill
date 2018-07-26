@@ -1,6 +1,10 @@
 Overview
 --------
 
+.. image:: http://www.repostatus.org/badges/latest/inactive.svg
+   :alt: Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.
+   :target: http://www.repostatus.org/#inactive
+
 This is an R package and command line program to drill production and recognition of pinyin.  The program is tested to run in a Bash shell (in a Unicode locale) which should be available on most modern operating systems (i.e. "Bash on Ubuntu on Windows").  It probably runs fine in other \*Nix shells but should not be expected to run in the Windows Command Prompt.
 
 Installation
@@ -15,10 +19,10 @@ The ``pinyin_drill`` program in the ``exec`` folder is dependent on the command-
     > devtools::install_github("trevorld/pinyin_drill")
     > quit('no')
 
-The executable Rscript ``exec/pinyin_drill`` can then be copied to a ``bin`` directory on your path if you like (R won't automatically add it on a path for you)::
+A symbolic link to the executable Rscript ``pinyin_drill`` can then be made to a ``bin`` directory on your path if you like (R won't automatically add it on a path for you)::
 
     bash$ R
-    > file.copy(system.file("exec/pinyin_drill", package="PinyinDrillR"), "~/bin/pinyin_drill")
+    > file.symlink(system.file("exec/pinyin_drill", package="PinyinDrillR"), "~/bin/pinyin_drill")
 
 The program needs audio in a certain format (described below) in a folder specified by the ``-a, --audio_dir`` option (default ``audio``).  Depending on where you like your audio stored you may wish to create a bash (or other shell) alias for ``pinyin_drill``::
 
