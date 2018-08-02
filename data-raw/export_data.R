@@ -3,15 +3,15 @@ read_csv <- function(x) {
     utils::read.csv(x, stringsAsFactors=FALSE, encoding="UTF-8") 
 }
 
-mandarin_initials <- read_csv("raw-data/initial.csv")
+mandarin_initials <- read_csv("data-raw/initial.csv")
 save(mandarin_initials, file="data/mandarin_initials.rda", compress=TRUE)
 initial <- select(mandarin_initials, initial, i.ipa = ipa, i.bopomofo = bopomofo)
 
-mandarin_finals <- read_csv("raw-data/final.csv")
+mandarin_finals <- read_csv("data-raw/final.csv")
 save(mandarin_finals, file="data/mandarin_finals.rda", compress=TRUE)
 final <- select(mandarin_finals, final, f.ipa = ipa, f.bopomofo = bopomofo)
 
-mandarin_pinyin_mappings <- read_csv("raw-data/pinyin_initial_final.csv")
+mandarin_pinyin_mappings <- read_csv("data-raw/pinyin_initial_final.csv")
 
 mandarin_pinyin_mappings <- left_join(mandarin_pinyin_mappings, initial, by="initial")
 
