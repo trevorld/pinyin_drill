@@ -15,8 +15,8 @@ The ``pinyin_drill`` program in the ``exec`` folder is dependent on the command-
     bash$ sudo apt install vlc r-base pip 
     bash$ sudo -H pip install cjklib
     bash$ sudo R
-    > install.packages(c("devtools")) # manually select mirror
-    > devtools::install_github("trevorld/pinyin_drill")
+    > install.packages(c("remotes")) # manually select mirror
+    > remotes::install_github("trevorld/pinyin_drill")
     > quit('no')
 
 A symbolic link to the executable Rscript ``pinyin_drill`` can then be made to a ``bin`` directory on your path if you like (R won't automatically add it on a path for you)::
